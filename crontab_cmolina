@@ -1,1 +1,4 @@
 0 * * * * /usr/bin/notify_date
+@reboot /usr/bin/auto_nfs_mount hangar
+@reboot /usr/bin/auto_nfs_mount laptop-cmolina
+@reboot /usr/bin/auto_nfs_mount desktop-cmolina
