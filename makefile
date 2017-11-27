@@ -3,9 +3,8 @@
 all:
 	@echo "Run 'make <program>' to install the desired program"
 
-hourly_notification:
+hourly_notification: crontab_set
 	sudo install -Dm755 date_notification.sh /usr/bin/notify_date
-	crontab_set
 	sudo systemctl enable cronie.service
 	sudo systemctl start cronie.service
 	echo "Configured hourly notification using crontab"
